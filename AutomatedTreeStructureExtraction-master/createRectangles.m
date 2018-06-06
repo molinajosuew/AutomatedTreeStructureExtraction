@@ -10,6 +10,7 @@ function cell_inc=createRectangles(lengthToSearch,othk, lenIncrStep, nBands,sz)
 %nBands: number of orientation which is used in algorithm,
 %sz: size of input.
 
+global f;
 
 cell_idx=cell(nBands/2,1);
 cell_inc=cell(lenIncrStep,1);
@@ -73,9 +74,8 @@ for s=1: lenIncrStep
         cell_idx{idx+1}=sec;
     end
     cell_inc{s}=cell_idx;
-    
+    waitbar((4 * s) / (5 * lenIncrStep), f);
 end
-
 
 % Created by Cihan Kayasandik
 %August 2017

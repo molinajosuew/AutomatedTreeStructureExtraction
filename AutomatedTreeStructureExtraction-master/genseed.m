@@ -1,8 +1,11 @@
 function [S,S_i,D]=genseed(self, lb)
+disp('genseed');
 %this code will be run for each soma. inputSeg is the segmented image
 %where all soma regions set equal to zero but the selected one.
 %inputSoma(which is not required here though) is the soma region of the
 %selected one.
+
+global base;
 
 cutOff=2*(sqrt(2)-1/2);
 sz=size(self.inputSeg);
@@ -76,12 +79,14 @@ base=self.inputSeg;
 base(S)=5;
 inputS=self.inputSoma;
 base=base.*inputS; somaSeeds=find(base==5);
-%SS=secondRoundSeeding(self, D, S); S=[S; SS];
+% SS=secondRoundSeeding(self, D, S); S=[S; SS];
 S2=eliminate_extra_seeding(S,D,sz);
 S=unique(S2);
 S=[S; somaSeeds];
 base=self.inputSeg;
-base(S)=5; figure; imshow(base,[],'InitialMagnification',9000)
+base(S)=5;
+% figure;
+% imshow(base,[],'InitialMagnification',9000)
 S_i=[];
 for i=1:length(S)
     [a,b]=ind2sub(sz,S(i));

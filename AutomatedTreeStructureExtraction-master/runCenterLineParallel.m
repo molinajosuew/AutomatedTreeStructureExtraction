@@ -8,6 +8,10 @@ function [neuriteGraph,cell_inc]=runCenterLineParallel(inputSeg,inputSoma,option
 %densityMap: cell contain densities extracted along the traced neurites of each somas.
 %cd('/Users/cihanbilgekayasandik/Desktop/tracing_inpreparations_2');
 
+global f;
+
+f = waitbar(0,'Loading...');
+
 %pre-generation of rectangles for seed search
 lenghtToSearch=40; 
 thickness=9; 
@@ -20,19 +24,26 @@ else
 end
 %tic;
 CCC=connComp(inputSeg);
+waitbar(.9,f);
 THR=300;
 InSidx = cat(1, CCC.compIdx{CCC.compCard > THR});
 InS = zeros(size(inputSeg));
 InS(InSidx) = 1;
 inputSeg=InS;
-lb=0.08; 
+% lb=0.08; 
+global lb;
+disp(lb);
 [neuriteGraph,D]=generateCenterLine(double(inputSeg), inputSoma, lb,cell_inc,lenghtToSearch,NumofBands,NumofIncrement,option);
+waitbar(1,f);
 %toc;
 
 %density estimation
 %patchsize=3;
 
 %densityMap=densityEstimate(image_red, neuriteGraph,D,patchsize);
+
+close(f);
+
 end
 
 % Created by Cihan Kayasandik and Pooran Negi

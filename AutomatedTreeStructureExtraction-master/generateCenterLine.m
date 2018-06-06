@@ -1,4 +1,5 @@
 function [path_neu,D]=generateCenterLine(inputSeg, inputSoma, lb,cell_inc,lenghtToSearch,NumofBands,NumofIncrement,option)
+disp('generateCenterLine');
 % this code generates the centerline tracing for each neurite of each soma
 % INPUT:
 % inputSeg: segmented image,
