@@ -1,0 +1,281 @@
+tic;y_noise = atrousdec(noise,'maxflat',4); toc
+Elapsed time is 0.822819 seconds.
+save y_noiseF y_noise
+tic; load y_noiseF.mat; toc
+Elapsed time is 0.125177 seconds.
+% loading data into matlab is not time consuming. as above order shows
+whos
+  Name           Size                Bytes  Class     Attributes
+
+  noise        512x512             2097152  double              
+  y_noise        1x5              10486320  cell                
+
+shear_parameters.dcomp =[ 3  3  4  4];
+% .dsize(i) indicate the local directional filter will be
+% dsize(i) by dsize(i)
+shear_parameters.dsize =[32 32 16 16];
+tic; for i=1:level, 
+    w_s=shearing_filters_Myer(shear_parameters.dsize(i),shear_parameters.dcomp(i));
+    for k=1:2^shear_parameters.dcomp(i),
+       shear_f{i}(:,:,k) =( fft2(w_s(:,:,k),L,L)./L); 
+    end
+end; toc
+{??? Undefined function or variable 'level'.
+} 
+tic; for i=1:4, 
+    w_s=shearing_filters_Myer(shear_parameters.dsize(i),shear_parameters.dcomp(i));
+    for k=1:2^shear_parameters.dcomp(i),
+       shear_f{i}(:,:,k) =( fft2(w_s(:,:,k),L,L)./L); 
+    end
+end; toc
+{??? Undefined function or variable 'L'.
+} 
+% Modify expression to add input arguments.
+% Example:
+%   a = [1 2 3; 4 5 6]; 
+%   foo(a);
+
+denoise_shearlet_example
+if system_dependent('IsDebugMode')==1, dbquit; end
+L=512;
+tic; for i=1:4, 
+    w_s=shearing_filters_Myer(shear_parameters.dsize(i),shear_parameters.dcomp(i));
+    for k=1:2^shear_parameters.dcomp(i),
+       shear_f{i}(:,:,k) =( fft2(w_s(:,:,k),L,L)./L); 
+    end
+end; toc
+Elapsed time is 3.432523 seconds.
+tic; for i=1:4, 
+    w_s=shearing_filters_Myer(shear_parameters.dsize(i),shear_parameters.dcomp(i));
+    for k=1:2^shear_parameters.dcomp(i),
+       shear_f{i}(:,:,k) =( fft2(w_s(:,:,k),L,L)./L); 
+    end
+end; toc
+Elapsed time is 1.451985 seconds.
+tic; for i=1:4, 
+    w_s=shearing_filters_Myer(shear_parameters.dsize(i),shear_parameters.dcomp(i));
+    for k=1:2^shear_parameters.dcomp(i),
+       shear_f{i}(:,:,k) =( fft2(w_s(:,:,k),L,L)./L); 
+    end
+end; toc
+Elapsed time is 1.282451 seconds.
+tic; for i=1:4, 
+    w_s=shearing_filters_Myer(shear_parameters.dsize(i),shear_parameters.dcomp(i));
+    for k=1:2^shear_parameters.dcomp(i),
+       shear_f{i}(:,:,k) =( fft2(w_s(:,:,k),L,L)./L); 
+    end
+end; toc
+Elapsed time is 1.466504 seconds.
+whos
+  Name                    Size                   Bytes  Class     Attributes
+
+  L                       1x1                        8  double              
+  display_flag            1x1                        8  double              
+  i                       1x1                        8  double              
+  k                       1x1                        8  double              
+  noise                 512x512                2097152  double              
+  shear_f                 1x4                201327040  cell                
+  shear_parameters        1x1                      416  struct              
+  w_s                    16x16x16                32768  double              
+  x                     512x512                2097152  double              
+  y_noise                 1x5                 10486320  cell                
+
+save shear_fF shear_f
+tic; load shear_fF; toc
+Elapsed time is 2.273812 seconds.
+tic; load shear_fF; toc
+Elapsed time is 2.579558 seconds.
+tic; load shear_fF; toc
+Elapsed time is 2.227737 seconds.
+% not worth as per time comparision
+%%%convolution comparison
+uiopen('D:\psn\UH\Research\shearletPackage\timeDomian3DImplemetation\CONVNFFT_Folder\convnfft.m',1)
+help conv2
+ CONV2 Two dimensional convolution.
+    C = CONV2(A, B) performs the 2-D convolution of matrices A and B.
+    If [ma,na] = size(A), [mb,nb] = size(B), and [mc,nc] = size(C), then
+    mc = max([ma+mb-1,ma,mb]) and nc = max([na+nb-1,na,nb]).
+ 
+    C = CONV2(H1, H2, A) convolves A first with the vector H1 along the
+    rows and then with the vector H2 along the columns. If n1 = length(H1)
+    and n2 = length(H2), then mc = max([ma+n1-1,ma,n1]) and 
+    nc = max([na+n2-1,na,n2]).
+ 
+    C = CONV2(..., SHAPE) returns a subsection of the 2-D
+    convolution with size specified by SHAPE:
+      'full'  - (default) returns the full 2-D convolution,
+      'same'  - returns the central part of the convolution
+                that is the same size as A.
+      'valid' - returns only those parts of the convolution
+                that are computed without the zero-padded edges.
+                size(C) = max([ma-max(0,mb-1),na-max(0,nb-1)],0).
+ 
+    See also <a href="matlab:help conv">conv</a>, <a href="matlab:help convn">convn</a>, <a href="matlab:help filter2">filter2</a> and, in the <a href="matlab:help signal">signal</a> Processing
+    Toolbox, <a href="matlab:help xcorr2">xcorr2</a>.
+
+    Overloaded methods:
+       <a href="matlab:help uint8/conv2">uint8/conv2</a>
+       <a href="matlab:help uint16/conv2">uint16/conv2</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc conv2">doc conv2</a>
+
+A=B=randn(512,512);
+??? A=B=randn(512,512);
+       |
+{Error: The expression to the left of the equals sign is not a
+valid target for an assignment.
+} 
+A=randn(512,512);
+B=A;
+tic; conv2(A,B,'same'); toc
+Elapsed time is 18.028204 seconds.
+tic; conv2(A,B,'same'); toc
+Elapsed time is 16.164739 seconds.
+man  conv2p
+{??? Undefined function or method 'man' for input arguments of
+type 'char'.
+} 
+help conv2p
+
+conv2p not found.
+
+Use the Help browser Search tab to <a href="matlab:docsearch conv2p">search the documentation</a>, or
+type "<a href="matlab:help help">help help</a>" for help command options, such as help for methods.
+
+tic; conv2p(A,B,'same'); toc
+{??? Error using ==> conv2p
+Too many input arguments.
+} 
+tic; conv2p(A,B); toc
+Elapsed time is 0.128464 seconds.
+tic; connfft(A,B,'same'); toc
+{??? Undefined function or method 'connfft' for input arguments of
+type 'double'.
+} 
+tic; convfft(A,B,'same'); toc
+{??? Undefined function or method 'convfft' for input arguments of
+type 'double'.
+} 
+uiopen('D:\psn\UH\Research\shearletPackage\timeDomian3DImplemetation\CONVNFFT_Folder\convnfft.m',1)
+whos
+  Name                    Size                   Bytes  Class     Attributes
+
+  A                     512x512                2097152  double              
+  B                     512x512                2097152  double              
+  L                       1x1                        8  double              
+  ans                   512x512                2097152  double              
+  display_flag            1x1                        8  double              
+  i                       1x1                        8  double              
+  k                       1x1                        8  double              
+  noise                 512x512                2097152  double              
+  shear_f                 1x4                201327040  cell                
+  shear_parameters        1x1                      416  struct              
+  w_s                    16x16x16                32768  double              
+  x                     512x512                2097152  double              
+  y_noise                 1x5                 10486320  cell                
+
+tic; convfft(single(A),single(B),'same'); toc
+{??? Undefined function or method 'convfft' for input arguments of
+type 'single'.
+} 
+tic; convnfft(A,B,'same'); toc
+Elapsed time is 0.671659 seconds.
+tic; convnfft(A,B,'same'); toc
+Elapsed time is 0.284053 seconds.
+tic; convnfft(A,B,'same'); toc
+Elapsed time is 0.197123 seconds.
+tic; convnfft(A,B,'same'); toc
+Elapsed time is 0.234025 seconds.
+tic; convnfft(A,B,'same'); toc
+Elapsed time is 0.197475 seconds.
+tic; conv2p(A,B); toc
+Elapsed time is 0.055164 seconds.
+tic; conv2p(A,B); toc
+Elapsed time is 0.054125 seconds.
+% as per code its done in fft domain. not the usual matlab conv2
+builtin('cd','D:\psn\UH\Research\SurfBox\Matlab');
+workspace
+filebrowser
+builtin('cd','D:\psn\UH\Research\SurfBox\Matlab');
+builtin('cd','D:\psn\UH\Research\SurfBox\Demo');
+uiopen('D:\psn\UH\Research\SurfBox\mexcompile.m',1)
+% fftw is used anyway underlying
+%http://www.mathworks.com/company/newsletters/news_notes/clevescorner/winter01_cleve.html
+demo toolbox Optimization
+filebrowser
+uiopen('D:\psn\UH\Research\patternRecog\shearlet_toolbox\denoise_shearlet_example.m',1)
+% Modify expression to add input arguments.
+% Example:
+%   a = [1 2 3; 4 5 6]; 
+%   foo(a);
+
+denoise_shearlet_example
+dbcont
+Initial PSNR = 22.117532
+PSNR After Denoising = 29.947754
+Reconstruction Error (norm) After Denoising = 0.008933
+{Warning: Image data contains values that are out of range.  Out of range values will be given the
+nearest valid value.} 
+> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\imagesci\private\writegif.m',361,1)">imagesci\private\writegif at 361</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\imagesci\imwrite.m',473,1)">imwrite at 473</a>
+  In <a href="matlab: opentoline('D:\psn\UH\Research\patternRecog\shearlet_toolbox\denoise_shearlet_example.m',107,1)">denoise_shearlet_example at 107</a>
+dbclear ('D:\psn\UH\Research\patternRecog\shearlet_toolbox\denoise_shearlet_example.m', '13')
+profile on
+denoise_shearlet_example
+Initial PSNR = 22.082877
+PSNR After Denoising = 29.916724
+Reconstruction Error (norm) After Denoising = 0.008914
+{Warning: Image data contains values that are out of range.  Out of range values will be given the
+nearest valid value.} 
+> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\imagesci\private\writegif.m',361,1)">imagesci\private\writegif at 361</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\imagesci\imwrite.m',473,1)">imwrite at 473</a>
+  In <a href="matlab: opentoline('D:\psn\UH\Research\patternRecog\shearlet_toolbox\denoise_shearlet_example.m',107,1)">denoise_shearlet_example at 107</a>
+ profview(22);
+ opentoline(urldecode('D%3A%5Cpsn%5CUH%5CResearch%5CpatternRecog%5Cshearlet_toolbox%5Cnsst_dec2.m'),46)
+profview(0)
+ profview(33);
+ profview(23);
+ profview(35);
+ profview(37);
+ profview(12);
+ profview(22);
+checkcode('denoise_shearlet_example.m')
+{??? Undefined function or method 'checkcode' for input arguments of type 'char'.
+} 
+mlintrpt('denoise_shearlet_example.m')
+mlintrpt('shearlet_toolbox','dir')
+mlintrpt
+ opentoline(urldecode('D%3A%5Cpsn%5CUH%5CResearch%5CpatternRecog%5Cshearlet_toolbox%5Cgen_x_y_cordinates.m'),37)
+ opentoline(urldecode('D%3A%5Cpsn%5CUH%5CResearch%5CpatternRecog%5Cshearlet_toolbox%5Cmeyer_wind.m'),11)
+profview(0)
+load('C:\Users\psnegi\Desktop\matlabShearletProfilingResult.mat')
+whos
+  Name                    Size                   Bytes  Class     Attributes
+
+  A                     512x512                2097152  double              
+  B                     512x512                2097152  double              
+  L                       1x1                        8  double              
+  Tscalars                1x3                       24  double              
+  ans                   512x512                2097152  double              
+  display_flag            1x1                        8  double              
+  dst                     1x5                102761008  cell                
+  dst_scalars             1x5                      952  cell                
+  i                       1x1                        8  double              
+  k                       1x1                        8  double              
+  lpfilt                  1x7                       14  char                
+  noise                 512x512                2097152  double              
+  p0                      1x1                        8  double              
+  p1                      1x1                        8  double              
+  shear_f                 1x4                201327040  cell                
+  shear_parameters        1x1                      416  struct              
+  shear_version           1x1                        8  double              
+  sigma                   1x1                        8  double              
+  w_s                    16x16x16                32768  double              
+  x                     512x512                2097152  double              
+  x_noisy               512x512                2097152  double              
+  xr                    512x512                2097152  double              
+  y_noise                 1x5                 10486320  cell                
+
+clear all
+diary off

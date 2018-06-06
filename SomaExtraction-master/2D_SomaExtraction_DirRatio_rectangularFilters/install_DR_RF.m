@@ -1,0 +1,13 @@
+
+folder = fileparts(which('contents_RF.m'));
+
+% add folders to path
+addpath(...
+    fullfile(folder),...
+    fullfile(folder, 'data'),...
+    fullfile(folder, 'anigauss'),...
+    fullfile(folder, 'fast marching toolbox_reduced'));
+
+open(fullfile(folder,'Script.m'))
+
+disp('all paths are added')

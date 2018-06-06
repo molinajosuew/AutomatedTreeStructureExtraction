@@ -1,0 +1,622 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=mex 2017.12.18)  1 FEB 2018 09:57
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**anigauss.c
+(./anigauss.c
+This is MeX  Version 1.05  18 XII 1993  (B. Jackowski & M. Ry\'cko)
+! You can't use `macro parameter character #' in vertical mode.
+l.1 #
+     include "anigauss.h"
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.2 #
+     include <stdlib.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.3 #
+     include <math.h>
+? 
+! You can't use `macro parameter character #' in vertical mode.
+l.7 #
+     ifdef COPYRIGHT_NOTICE
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.7 #ifdef COPYRIGHT_
+                     NOTICE
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.8 
+    
+? 
+! You can't use `macro parameter character #' in vertical mode.
+l.72 #
+      endif /* COPYRIGHT_NOTICE */
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.72 #endif /* COPYRIGHT_
+                         NOTICE */
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.73 
+     
+? 
+! You can't use `macro parameter character #' in vertical mode.
+l.75 #
+      ifndef PI
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.76 #
+      ifdef M_PI
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.76 #ifdef M_
+              PI
+? 
+! You can't use `macro parameter character #' in math mode.
+l.77 #
+      define PI M_PI
+? 
+! You can't use `macro parameter character #' in math mode.
+l.78 #
+      else
+? 
+! You can't use `macro parameter character #' in math mode.
+l.79 #
+      define PI 3.14159265358979323846
+? 
+! You can't use `macro parameter character #' in math mode.
+l.80 #
+      endif
+? 
+! You can't use `macro parameter character #' in math mode.
+l.81 #
+      endif
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.82 
+     
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.85 #
+      define SRCTYPE double
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.88 #
+      define DSTTYPE double
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.97                      static void f_
+                                        iir_xline_filter(SRCTYPE *src, DSTTY...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.105 
+      
+? 
+
+Overfull \hbox (109.84084pt too wide) in paragraph at lines 97--105
+[]\tenrm static void f$[]\teni ir[]line[]ilter\tenrm (\teni SRCTYPE \tensy ^^C 
+\teni src; DSTTYPE \tensy ^^C \teni dest; intsx; intsy; double \tensy ^^C \teni
+ filter\tenrm ); \teni staticvoidf[]ir[]line[]ilter\tenrm (\teni DSTTYPE \tensy
+ ^^C|
+
+\hbox(7.5+2.86108)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm s
+.\tenrm t
+.\tenrm a
+.\tenrm t
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.110 ...nbuf, outbuf, bufwidth, bufheight, sigma_
+                                                  v, sigma_u, phi,
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.130 
+      
+? 
+
+Overfull \hbox (115.44437pt too wide) in paragraph at lines 108--130
+[]\tenrm /* * the main func-tion: * ani-gauss(inbuf, out-buf, bu-fwidth, bu-fhe
+-ight, sigma$[]\teni ; sigma[]; phi; \tensy ^^C\teni derivative[]rder[]; deriva
+tive[]rder[]\tenrm ); \tensy ^^C ^^C|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm *
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm *
+.etc.
+
+
+Overfull \hbox (48.11528pt too wide) in paragraph at lines 108--130
+\teni v \tensy ^^@ \teni axis \tenrm = \teni shortaxis \tensy ^^C \teni u \tens
+y ^^@ \teni axis \tenrm = \teni longaxis \tensy ^^C \teni phi \tenrm = \teni or
+ientationangleindegrees \tensy ^^C ^^C\teni forexample; anisotropicdatasmoothin
+g \tenrm :|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\teni v
+.\kern0.35878
+.\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+.\tensy ^^@
+.\penalty 700
+.etc.
+
+
+Overfull \hbox (133.91356pt too wide) in paragraph at lines 108--130
+\tensy ^^C\teni anigauss\tenrm (\teni inptr; outptr; \tenrm 512\teni ; \tenrm 5
+12\teni ; \tenrm 3\teni :\tenrm 0\teni ; \tenrm 7\teni :\tenrm 0\teni ; \tenrm 
+30\teni :\tenrm 0\teni ; \tenrm 0\teni ; \tenrm 0); \tensy ^^C ^^C \teni or; an
+isotropicedgedetection \tenrm : \tensy ^^C\teni anigauss\tenrm (\teni inptr; ou
+tptr; \tenrm 512\teni ; \tenrm 512\teni ; \tenrm 3\teni :\tenrm 0\teni ; \tenrm
+ 7\teni :\tenrm 0\teni ; \tenrm 30\teni :\tenrm 0\teni ; \tenrm 1\teni ; \tenrm
+ 0); \tensy ^^C ^^C|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tensy ^^C
+.\teni a
+.\teni n
+.\teni i
+.\teni g
+.etc.
+
+
+Overfull \hbox (71.41682pt too wide) in paragraph at lines 108--130
+\teni or; anisotropiclinedetection \tenrm : \tensy ^^C\teni anigauss\tenrm (\te
+ni inptr; outptr; \tenrm 512\teni ; \tenrm 512\teni ; \tenrm 3\teni :\tenrm 0\t
+eni ; \tenrm 7\teni :\tenrm 0\teni ; \tenrm 30\teni :\tenrm 0\teni ; \tenrm 2\t
+eni ; \tenrm 0); \tensy ^^C ^^C \teni or; in \tensy ^^@ \teni placeanisotropicd
+atasmoothing \tenrm :|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\teni o
+.\teni r
+.\kern0.27779
+.\kern-0.55556
+.\teni ;
+.etc.
+
+[1]
+Overfull \hbox (17.07944pt too wide) in paragraph at lines 146--149
+[]\tenrm a11 = cos(phirad)*cos(phirad)*su2 + sin(phirad)*sin(phirad)*sv2; a21 =
+ cos(phirad)*sin(phirad)*(su2-sv2);|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm a
+.\tenrm 1
+.\tenrm 1
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.158     f_
+            iir_xline_filter(input,output,sizex,sizey,filter);
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.159 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.165         f_
+                iir_tline_filter(output,output,sizex,sizey,filter, tanp);
+? 
+! Extra }, or forgotten $.
+l.166     }
+           
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.171 
+      
+? 
+
+Overfull \hbox (488.50299pt too wide) in paragraph at lines 163--171
+[]\tenrm if (tanp != 0.0)  /* fil-ter in the tanp-direction */ f$[]\teni ir[]li
+ne[]ilter\tenrm (\teni output; output; sizex; sizey; filter; tanp\tenrm ); \ten
+i else[]$ |
+
+\hbox(7.5+2.86108)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm i
+.\tenrm f
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm (
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.174         f_
+                iir_derivative_filter(output, output, sizex, sizey, phirad-P...
+
+? 
+! Extra }, or forgotten $.
+l.177 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.178 
+      
+? 
+
+Overfull \hbox (122.40967pt too wide) in paragraph at lines 172--178
+[]\tenrm /* do the de-ri-va-tive fil-ter: [-1,0,1] ro-ta-ted over phi */ for(i=
+0; i<orderv; i++) f$[]\teni ir[]erivative[]ilter\tenrm (\teni output; output; s
+izex; sizey; phirad \tensy ^^@|
+
+\hbox(7.5+2.86108)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm *
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm d
+.etc.
+
+
+Overfull \hbox (4.52388pt too wide) in paragraph at lines 233--244
+[]\tenrm scale = 1.0/((1.0+a1-a2+a3)*(1.0-a1-a2-a3)*(1.0+a2+(a1-a3)*a3)); M[0] 
+= scale*(-a3*a1+1.0-a3*a3-a2);|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm s
+.\tenrm c
+.\tenrm a
+.\tenrm l
+.etc.
+
+
+Overfull \hbox (78.24628pt too wide) in paragraph at lines 233--244
+\tenrm M[1] = scale*(a3+a1)*(a2+a3*a1); M[2] = scale*a3*(a1+a3*a2); M[3] = scal
+e*(a1+a3*a2); M[4] = -scale*(a2-1.0)*(a2+a3*a1);|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm M
+.\tenrm [
+.\tenrm 1
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+
+Overfull \hbox (158.46878pt too wide) in paragraph at lines 233--244
+\tenrm M[5] = -scale*a3*(a3*a1+a3*a3+a2-1.0); M[6] = scale*(a3*a1+a2+a1*a1-a2*a
+2); M[7] = scale*(a1*a2+a3*a2*a2-a1*a3*a3-a3*a3*a3-a3*a2+a3);|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm M
+.\tenrm [
+.\tenrm 5
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+
+Overfull \hbox (95.35754pt too wide) in paragraph at lines 246--249
+[]\tenrm /************************************** * the low le-vel fil-te-ring o
+pe-ra-tions * **************************************/ |
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm *
+.\tenrm *
+.\tenrm *
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.258                      f_
+                             iir_xline_filter(SRCTYPE *src, DSTTYPE *dest, i...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.267 
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.267 
+      
+? 
+
+Overfull \hbox (476.72003pt too wide) in paragraph at lines 257--267
+[]\tenrm static void f$[]\teni ir[]line[]ilter\tenrm (\teni SRCTYPE \tensy ^^C 
+\teni src; DSTTYPE \tensy ^^C \teni dest; intsx; intsy; double \tensy ^^C \teni
+ filter\tenrm )[]$ |
+
+\hbox(7.5+2.86108)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm s
+.\tenrm t
+.\tenrm a
+.\tenrm t
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.314                      f_
+                             iir_yline_filter(DSTTYPE *src, DSTTYPE *dest, i...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.326 
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.326 
+      
+? 
+
+Overfull \hbox (790.18153pt too wide) in paragraph at lines 313--326
+[]\tenrm static void f$[]\teni ir[]line[]ilter\tenrm (\teni DSTTYPE \tensy ^^C 
+\teni src; DSTTYPE \tensy ^^C \teni dest; intsx; intsy; double \tensy ^^C \teni
+ filter\tenrm )[]$ |
+
+\hbox(7.5+2.86108)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm s
+.\tenrm t
+.\tenrm a
+.\tenrm t
+.etc.
+
+[2]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.410                      f_
+                             iir_tline_filter(DSTTYPE *src, DSTTYPE *dest, i...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.429 
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.429 
+      
+? 
+
+Overfull \hbox (1137.3625pt too wide) in paragraph at lines 409--429
+[]\tenrm static void f$[]\teni ir[]line[]ilter\tenrm (\teni DSTTYPE \tensy ^^C 
+\teni src; DSTTYPE \tensy ^^C \teni dest; intsx; intsy; double \tensy ^^C \teni
+ filter; doubletanp\tenrm )[]$ |
+
+\hbox(7.5+2.86108)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm s
+.\tenrm t
+.\tenrm a
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (96.32965pt too wide) in paragraph at lines 439--444
+[]\tenrm /* al-loc re-cur-sion line buf-fers */ buf0 = mal-loc((sx+sy*tanp+2)*s
+izeof(*buf0)); buf1 = mal-loc((sx+sy*tanp+2)*sizeof(*buf1));|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm *
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm a
+.etc.
+
+[3]
+Overfull \hbox (2.63501pt too wide) in paragraph at lines 551--562
+[]\tenrm unp = *(--p1)-uplus; unp1 = *(--p2)-uplus; unp2 = *(--p3)-uplus; pix =
+ M[0]*unp+M[1]*unp1+M[2]*unp2|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm u
+.\tenrm n
+.\tenrm p
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+! Too many }'s.
+l.634 }
+       
+? 
+
+Overfull \hbox (35.46841pt too wide) in paragraph at lines 623--635
+[]\tenrm if (q4)  buf0 -= (int)(sy*tanp+1); buf1 -= (int)(sy*tanp+1); buf2 -= (
+int)(sy*tanp+1); buf3 -= (int)(sy*tanp+1);|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm i
+.\tenrm f
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm (
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.638                      f_
+                             iir_derivative_filter(DSTTYPE *src, DSTTYPE *de...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.648 
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.648 
+      
+? 
+
+Overfull \hbox (288.55464pt too wide) in paragraph at lines 636--648
+\teni dest; intsx; intsy; doublephi; intorder\tenrm )[]$ |
+
+\hbox(7.5+2.5)x469.75499
+.\teni d
+.\teni e
+.\teni s
+.\teni t
+.\teni ;
+.etc.
+
+! Too many }'s.
+l.678 }
+       
+? 
+)
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+! Emergency stop.
+<*> 
+    
+End of file on the terminal!
+
+Output written on anigauss.dvi (3 pages, 17688 bytes).

@@ -1,0 +1,42 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=mex 2017.12.18)  1 FEB 2018 09:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**mex/perform_front_propagation_2d.cpp mex/perform_front_propagation_2d_mex.cpp
+ mex/fheap/fib.cpp
+(./mex/perform_front_propagation_2d.cpp
+This is MeX  Version 1.05  18 XII 1993  (B. Jackowski & M. Ry\'cko)
+
+Overfull \hbox (65.80214pt too wide) in paragraph at lines 1--17
+[]\tenrm /*=================================================================|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm *
+.\tenrm =
+.\tenrm =
+.etc.
+
+
+Overfull \hbox (50.80215pt too wide) in paragraph at lines 1--17
+\tenrm *=================================================================*/ |
+
+\hbox(7.5+2.5)x469.75499
+.\tenrm *
+.\tenrm =
+.\tenrm =
+.\tenrm =
+.\tenrm =
+.etc.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.19 // #
+         define CHECK_HEAP check_heap(i,j,k);
+? 
+! Emergency stop.
+l.19 // #
+         define CHECK_HEAP check_heap(i,j,k);
+End of file on the terminal!
+
+No pages of output.
